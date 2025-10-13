@@ -17,7 +17,7 @@ function SignIn() {
 
     setLoading(true);
     try {
-      const res = await fetch('https://hotel-nglt.vercel.app/signin', {
+      const res = await fetch('https://hotel-arx9.vercel.app/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })

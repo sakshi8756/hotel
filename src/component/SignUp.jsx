@@ -11,7 +11,7 @@ function SignUp() {
     setError("");
 
     try {
-      const res = await fetch("https://hotel-nglt.vercel.app/signup", {
+      const res = await fetch("https://hotel-arx9.vercel.app/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullName, email, password }),
