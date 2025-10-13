@@ -1,5 +1,15 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import {
+  FaWifi,
+  FaSwimmingPool,
+  FaUtensils,
+  FaDumbbell,
+  FaSpa,
+  FaShuttleVan,
+  FaConciergeBell,
+  FaCocktail,
+} from "react-icons/fa";
 
 function Home() {
   const rooms = [
@@ -21,33 +31,110 @@ function Home() {
       rating: 4.7,
       features: ["Free Wi-Fi", "1 King Bed", "Balcony", "Room Service"],
     },
+    
+  {
+  id: 3,
+  name: "Luxury Suite",
+  desc: "Luxury suite with a living area, sea view, and premium services.",
+  price: 250,
+  img: "https://plus.unsplash.com/premium_photo-1698405316329-fd9c43d7e11c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D",
+  rating: 4.9,
+  features: ["Free Wi-Fi", "2 Rooms", "Sea View", "Butler Service"],
+},
+
+  ];
+
+  const amenities = [
+    {
+      icon: <FaWifi className="text-3xl text-blue-600" />,
+      title: "Free High-Speed Wi-Fi",
+      desc: "Stay connected throughout the hotel with fast and reliable internet.",
+    },
+    {
+      icon: <FaSwimmingPool className="text-3xl text-blue-600" />,
+      title: "Infinity Pool",
+      desc: "Enjoy stunning views while you relax in our infinity pool.",
+    },
+    {
+      icon: <FaUtensils className="text-3xl text-blue-600" />,
+      title: "Fine Dining",
+      desc: "Relish multi-cuisine dishes crafted by world-class chefs.",
+    },
+    {
+      icon: <FaDumbbell className="text-3xl text-blue-600" />,
+      title: "Fitness Center",
+      desc: "Work out in our fully equipped, modern gym anytime you wish.",
+    },
+    {
+      icon: <FaSpa className="text-3xl text-blue-600" />,
+      title: "Spa & Wellness",
+      desc: "Rejuvenate with professional spa therapies and massages.",
+    },
+    {
+      icon: <FaShuttleVan className="text-3xl text-blue-600" />,
+      title: "Airport Shuttle",
+      desc: "Complimentary airport transfers for your convenience.",
+    },
+    {
+      icon: <FaConciergeBell className="text-3xl text-blue-600" />,
+      title: "24/7 Concierge",
+      desc: "Our friendly staff is always available for assistance.",
+    },
+    {
+      icon: <FaCocktail className="text-3xl text-blue-600" />,
+      title: "Bar & Lounge",
+      desc: "Unwind at our modern bar with premium cocktails and beverages.",
+    },
+  ];
+
+  const diningOptions = [
+    {
+      id: 1,
+      name: "The Ocean View Restaurant",
+      desc: "Experience gourmet dining with a view of the endless sea. Our chefs prepare international delicacies with local flavors.",
+      img: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1000&q=80",
+    },
+    {
+      id: 2,
+      name: "Sky Lounge & Bar",
+      desc: "Sip premium cocktails and enjoy live music at our rooftop bar with panoramic city views.",
+      img: "https://media.istockphoto.com/id/2222885802/photo/refreshing-drinks-by-the-poolside.jpg?s=612x612&w=0&k=20&c=18VAhaCAbc0fMFPksiVuDI5CQ_14W-OPncEpV1WtJ7I=",
+    },
     {
       id: 3,
-      name: "Luxury Suite",
-      desc: "Luxury suite with a living area, sea view, and premium services.",
-      price: 250,
-      img: "https://images.unsplash.com/photo-1626178807074-bf4769e3ea9f?auto=format&fit=crop&w=900&q=80",
-      rating: 4.9,
-      features: ["Free Wi-Fi", "2 Rooms", "Sea View", "Butler Service"],
+      name: "Sunrise Café",
+      desc: "Start your day with aromatic coffee, freshly baked pastries, and a serene garden ambiance.",
+      img: "https://images.unsplash.com/photo-1728208401732-3a662df8bee2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3VucmlzZSUyMENhZiVDMyVBOXxlbnwwfHwwfHx8MA%3D%3D",
     },
   ];
 
   return (
-    <div className="font-sans bg-gray-100">
+    <div className="font-sans bg-gray-100 scroll-smooth">
       {/* Navbar */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <h1 className="text-2xl font-bold text-blue-700">Seaside Hotel</h1>
           <div className="hidden md:flex space-x-6">
-            <a href="#rooms" className="hover:text-blue-600 transition">Rooms</a>
-            <a href="#amenities" className="hover:text-blue-600 transition">Amenities</a>
-            <a href="#dining" className="hover:text-blue-600 transition">Dining</a>
-            <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
+            <a href="#home" className="hover:text-blue-600 transition">
+              Home
+            </a>
+            <a href="#rooms" className="hover:text-blue-600 transition">
+              Rooms
+            </a>
+            <a href="#amenities" className="hover:text-blue-600 transition">
+              Amenities
+            </a>
+            <a href="#dining" className="hover:text-blue-600 transition">
+              Dining
+            </a>
+            <a href="#contact" className="hover:text-blue-600 transition">
+              Contact
+            </a>
           </div>
           <Link to="/signin">
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
-            Book Now
-          </button>
+            <button className="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+              Book Now
+            </button>
           </Link>
         </div>
       </nav>
@@ -118,13 +205,114 @@ function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* ✅ Amenities Section */}
+      <section id="amenities" className="bg-white py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
+            Our Amenities
+          </h2>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {amenities.map((item, index) => (
+              <div
+                key={index}
+                className="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg hover:-translate-y-2 transition-all text-center"
+              >
+                <div className="flex justify-center mb-3">{item.icon}</div>
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 🍽 Dining Section */}
+      <section id="dining" className="py-16 px-6 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-10">Dining Experience</h2>
+          <p className="max-w-2xl mx-auto text-gray-600 mb-12">
+            Explore world-class dining options crafted by our expert chefs. From cozy cafés to rooftop bars — enjoy flavors from across the globe.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-10">
+            {diningOptions.map((item) => (
+              <div key={item.id} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transition-all">
+                <img src={item.img} alt={item.name} className="h-56 w-full object-cover hover:scale-105 transition-transform" />
+                <div className="p-6 text-left">
+                  <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+            {/* 📞 Contact Section */}
+      <section
+        id="contact"
+        className="bg-blue-50 py-16 px-6 flex flex-col items-center text-center"
+      >
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+          Contact Us
+        </h2>
+        <p className="max-w-2xl text-gray-600 mb-10">
+          Have questions or want to make a booking? Our team is available 24/7 to
+          assist you with reservations, events, or special requests.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl w-full">
+          {/* Contact Info */}
+          <div className="bg-white shadow-lg rounded-2xl p-8 text-left space-y-4">
+            <h3 className="text-xl font-semibold mb-2 text-blue-700">Get in Touch</h3>
+            <p className="text-gray-700">📍 Address: 123 Seaside Road, Goa, India</p>
+            <p className="text-gray-700">📞 Phone: +91 98765 43210</p>
+            <p className="text-gray-700">📧 Email: contact@seasidehotel.com</p>
+            <p className="text-gray-700">🕒 Working Hours: Mon - Sun (24/7)</p>
+          </div>
+
+          {/* Contact Form */}
+          <form className="bg-white shadow-lg rounded-2xl p-8 space-y-4 text-left">
+            <h3 className="text-xl font-semibold mb-2 text-blue-700">Send Us a Message</h3>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:ring focus:ring-blue-300"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:ring focus:ring-blue-300"
+            />
+            <textarea
+              placeholder="Your Message"
+              className="w-full border border-gray-300 rounded-lg p-3 h-28 focus:ring focus:ring-blue-300"
+            ></textarea>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+                  {/* Footer */}
       <footer
         id="contact"
-        className="text-center text-gray-500 py-6 border-t bg-gray-100"
+        className="bg-gray-100 border-t text-center py-6 px-4"
       >
-        © {new Date().getFullYear()} Seaside Hotel. All Rights Reserved.
+        <p className="text-gray-600 font-semibold mb-2">
+          © {new Date().getFullYear()} Seaside Hotel. All Rights Reserved.
+        </p>
+        <p className="text-gray-500 text-sm">
+          Designed with ❤️ by the Seaside Hotel Team
+        </p>
       </footer>
+
+      
     </div>
   );
 }
