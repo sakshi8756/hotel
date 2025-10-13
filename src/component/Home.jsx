@@ -136,6 +136,11 @@ function Home() {
               Book Now
             </button>
           </Link>
+          <Link to="/signUp">
+            <button className="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+              Signup
+            </button>
+          </Link>
         </div>
       </nav>
 
